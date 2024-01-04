@@ -8,7 +8,7 @@ After=network.target
 [Service]
 Type=simple
 WorkingDirectory=/usr/bin/
-ExecStart=/usr/bin/osqueryd --flagfile=/home/tyler/flagfile.txt
+ExecStart=/usr/bin/osqueryd --flagfile=/etc/pifleet/flagfile.txt
 ExecReload=/bin/kill -HUP $MAINPID
 Restart=always
 StandardOutput=syslog
@@ -16,7 +16,7 @@ StandardError=syslog
 SyslogIdentifier=OSqueryForPi
 User=root
 Group=root
-Environment=PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/bin:/home/tyler
+Environment=PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/bin:/etc/pifleet
 
 [Install]
 WantedBy=multi-user.target
