@@ -23,10 +23,18 @@ echo "lan-rootca-01v.local CA" | sudo tee -a /opt/osquery/share/osquery/certs/ce
 cat ca.crt | sudo tee -a /opt/osquery/share/osquery/certs/certs.pem
 
 # Generate the fleet.pem file from Fleet and load to /etc/fleet.pem (or whatever you name it
+sudo mv fleet.pem /etc/fleet.pem
 
 # Generate the flagfile.txt and move to /etc/flagfile.txt with any necessary path updates 
+On your host: 
+scp flagfile.txt user@yourtarget.local:~/ 
+
+On your target: 
+nano flagfile.txt
+sudo mv flagfile.txt /etc/pifleet/
 
 # Create the pi-fleet.service file per the file in this repository. Update anything specific to your device
+sudo nano /
 
 # Optional: Update your /etc/hosts to have the fleet IP/hostname if necessary
 
