@@ -1,5 +1,5 @@
-# Place this here: 
-# /etc/systemd/system/pi-fleet.service                                                             
+# Place this here:
+# /etc/systemd/system/pi-fleet.service
 
 [Unit]
 Description=OSQueryForPi
@@ -7,13 +7,13 @@ After=network.target
 
 [Service]
 Type=simple
-WorkingDirectory=/usr/bin/osqueryd
+WorkingDirectory=/usr/bin/
 ExecStart=/usr/bin/osqueryd --flagfile=/home/tyler/flagfile.txt
 ExecReload=/bin/kill -HUP $MAINPID
 Restart=always
 StandardOutput=syslog
 StandardError=syslog
-SyslogIdentifier=FrontDisplay
+SyslogIdentifier=OSqueryForPi
 User=root
 Group=root
 Environment=PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/bin:/home/tyler
