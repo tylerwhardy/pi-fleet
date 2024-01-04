@@ -23,7 +23,7 @@ echo "lan-rootca-01v.local CA" | sudo tee -a /opt/osquery/share/osquery/certs/ce
 cat ca.crt | sudo tee -a /opt/osquery/share/osquery/certs/certs.pem
 
 # Generate the fleet.pem file from Fleet and load to /etc/pifleet/fleet.pem (or whatever you name it
-sudo mv fleet.pem /etc/fleet.pem
+sudo mv fleet.pem /etc/pifleet/fleet.pem
 
 # Generate the flagfile.txt and move to /etc/flagfile.txt with any necessary path updates 
 On your host: 
