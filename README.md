@@ -34,9 +34,10 @@ nano flagfile.txt
 sudo mv flagfile.txt /etc/pifleet/
 
 # Create the pi-fleet.service file per the file in this repository. Update anything specific to your device
-sudo nano /
+sudo nano /etc/systemd/system/pi-fleet.service
 
 # Optional: Update your /etc/hosts to have the fleet IP/hostname if necessary
+sudo nano /etc/hosts
 
 # Optional: Update your cloud-init files to have fleet IP/hostname if necessary (ie managed deployment)
 sudo nano /etc/cloud/templates/hosts.debian.tmpl
