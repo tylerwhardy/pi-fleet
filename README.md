@@ -22,7 +22,10 @@ sudo tar -xvf osquery-5.10.2_1.linux_aarch64.tar.gz -C /
 echo "lan-rootca-01v.local CA" | sudo tee -a /opt/osquery/share/osquery/certs/certs.pem
 cat ca.crt | sudo tee -a /opt/osquery/share/osquery/certs/certs.pem
 
-# Generate the fleet.pem file from Fleet and load to /etc/pifleet/fleet.pem (or whatever you name it
+# Generate the fleet.pem file from Fleet and load to /etc/pifleet/fleet.pem (or whatever you name it)
+
+Just make sure it matches what's in the flagfile.txt
+
 sudo mv fleet.pem /etc/pifleet/fleet.pem
 
 # Generate the flagfile.txt and move to /etc/flagfile.txt with any necessary path updates 
