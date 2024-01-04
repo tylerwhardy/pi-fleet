@@ -1,9 +1,9 @@
 # Server
 --tls_hostname=lan-fleet-01v.local:8080
---tls_server_certs=/home/tyler/lan-fleet-01v.pem
+--tls_server_certs=/etc/pifleet/lan-fleet-01v.pem
 # Enrollment
 --host_identifier=hostname
---enroll_secret_path=secret.txt
+--enroll_secret_path=/etc/pifleet/secret.txt
 --enroll_tls_endpoint=/api/v1/osquery/enroll
 # Configuration
 --config_plugin=tls
