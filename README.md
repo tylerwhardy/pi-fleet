@@ -27,10 +27,13 @@ sudo mv fleet.pem /etc/pifleet/fleet.pem
 
 # Generate the flagfile.txt and move to /etc/flagfile.txt with any necessary path updates 
 On your host: 
+
 scp flagfile.txt user@yourtarget.local:~/ 
 
 On your target: 
+
 nano flagfile.txt
+
 sudo mv flagfile.txt /etc/pifleet/
 
 # Create the pi-fleet.service file per the file in this repository. Update anything specific to your device
