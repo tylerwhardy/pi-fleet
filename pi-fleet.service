@@ -1,0 +1,22 @@
+# Place this here: 
+# /etc/systemd/system/pi-fleet.service                                                             
+
+[Unit]
+Description=OSQueryForPi
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/usr/bin/osqueryd --flagfile=flagfile.txt
+ExecStart=/usr/bin/osqueryd --flagfile=/home/tyler/flagfile.txt
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=FrontDisplay
+User=root
+Group=root
+Environment=PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/bin:/home/tyler
+
+[Install]
+WantedBy=multi-user.target
