@@ -7,7 +7,7 @@ After=network.target
 
 [Service]
 Type=simple
-WorkingDirectory=/usr/bin/osqueryd --flagfile=flagfile.txt
+WorkingDirectory=/usr/bin/osqueryd
 ExecStart=/usr/bin/osqueryd --flagfile=/home/tyler/flagfile.txt
 ExecReload=/bin/kill -HUP $MAINPID
 Restart=always
