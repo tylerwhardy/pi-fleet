@@ -22,3 +22,22 @@ sudo tar -xvf osquery-5.10.2_1.linux_aarch64.tar.gz -C /
 echo "lan-rootca-01v.local CA" | sudo tee -a /opt/osquery/share/osquery/certs/certs.pem
 cat ca.crt | sudo tee -a /opt/osquery/share/osquery/certs/certs.pem
 
+# Generate the fleet.pem file from Fleet and load to /etc/fleet.pem (or whatever you name it
+
+# Generate the flagfile.txt and move to /etc/flagfile.txt with any necessary path updates 
+
+# Create the pi-fleet.service file per the file in this repository. Update anything specific to your device
+
+# Optional: Update your /etc/hosts to have the fleet IP/hostname if necessary
+
+# Optional: Update your cloud-init files to have fleet IP/hostname if necessary (ie managed deployment)
+sudo nano /etc/cloud/templates/hosts.debian.tmpl
+sudo nano /etc/cloud/cloud.cfg
+
+# Create symlinks for the service
+
+sudo systemctl enable pi-fleet.service
+
+# Either reboot the server or activate the service
+
+sudo systemctl start pi-fleet.service
