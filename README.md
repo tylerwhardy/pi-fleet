@@ -20,6 +20,7 @@ sudo tar -xvf osquery-5.10.2_1.linux_aarch64.tar.gz -C /
 # Update hardcoded CA to have our own (Change the CA name if you care)
 
 echo "lan-rootca-01v.local CA" | sudo tee -a /opt/osquery/share/osquery/certs/certs.pem
+
 cat ca.crt | sudo tee -a /opt/osquery/share/osquery/certs/certs.pem
 
 # Generate the fleet.pem file from Fleet and load to /etc/pifleet/fleet.pem (or whatever you name it)
