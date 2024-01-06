@@ -48,6 +48,7 @@ sudo nano /etc/hosts
 
 # Optional: Update your cloud-init files to have fleet IP/hostname if necessary (ie managed deployment)
 sudo nano /etc/cloud/templates/hosts.debian.tmpl
+
 sudo nano /etc/cloud/cloud.cfg
 
 # Create symlinks for the service
